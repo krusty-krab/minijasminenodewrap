@@ -4,6 +4,10 @@
   "description": "Wraps minijasminenode to allow globbing from options and the CLI",
   "main": "index.js",
   "bin": "bin/mjnw",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krusty-krab/minijasminenodewrap.git"
+  }
   "keywords": [
     "minijasminenode",
     "cli",
