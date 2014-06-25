@@ -42,5 +42,5 @@ You can also invoke `minjjasminenodewrap` with arguments representing spec globs
 If you do this, the globs will replace anything currently listed in `options.specs`
 
 ```bash
-  $ ./node_modules/.bin/mjnw 'spec/**/*.js' 'more/specs/**/*.js'
+  $ ./node_modules/.bin/minijasminenodewrap 'spec/**/*.js' 'more/specs/**/*.js'
 ```
