@@ -32,9 +32,7 @@ module.exports = {
     // If true, include stack traces in failures.
     includeStackTrace: true,
     // Time to wait in milliseconds before a test automatically fails
-    defaultTimeoutInterval: 5000,
-    // cover args
-    coverArgs: ['node_modules/.bin/mjnw']
+    defaultTimeoutInterval: 5000
 };
 ```
 
