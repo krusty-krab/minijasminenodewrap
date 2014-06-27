@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var config = require('jasmine-config');
+
+if(!process.env.NODE_ENV)
+    process.env.NODE_ENV = 'test';
+
+var cli = require('../node_modules/istanbul/lib/cli');
+var globs = config.coverArgs || ['node_modules/.bin/mjnw'];
+
+if(!process.env.NODE_ENV)
+    process.env.NODE_ENV = 'test';
+
+var args = ['cover'].concat(globs);
+
+cli.runToCompletion(args);

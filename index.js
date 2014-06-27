@@ -1,10 +1,11 @@
 'use strict';
 
 var miniJasmineLib = require('minijasminenode2');
+var cli = require('./node_modules/istanbul/lib/cli');
 var multiGlob = require('multi-glob');
 var path = require('path');
 var argv = require('yargs').argv;
-var configFile = path.normalize(process.cwd() + '/config.js');
+var configFile = path.normalize(process.cwd() + '/jasmine-config.js');
 
 var options;
 try {
