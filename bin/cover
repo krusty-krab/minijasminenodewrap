@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var cli = require('../node_modules/istanbul/lib/cli');
+var argv = require('yargs').argv;
+var path = require('path');
+var pathToBin = path.join(__dirname, 'mjnw');
+
+var globs = argv._ || [];
+
+if(!process.env.NODE_ENV)
+    process.env.NODE_ENV = 'test';
+
+var args = ['cover', pathToBin].concat(globs);
+
+cli.runToCompletion(args);
