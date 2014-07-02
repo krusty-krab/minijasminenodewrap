@@ -31,6 +31,15 @@ if (specs)
 else
   execute();
 
-function execute () {
+function execute() {
+  if (argv.reportType === 'junit') {
+    var jasmineReporters = require('jasmine-reporters');
+    var junitXmlReporter = new jasmineReporters.JUnitXmlReporter({
+      savePath: argv.savePath || '',
+      filePrefix: argv.filePrefix || ''
+    });
+    miniJasmineLib.addReporter(junitXmlReporter);
+  }
+
   miniJasmineLib.executeSpecs(options);
 }

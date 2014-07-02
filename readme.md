@@ -1,7 +1,7 @@
 minijasminenodewrap
 ===================
 
-A simple wrapper around [minijasminenode2](https://github.com/juliemr/minijasminenode). 
+A simple wrapper around [minijasminenode2](https://github.com/juliemr/minijasminenode).
  - used to allow globs from the CLI or within the config
  - includes a utility to easily generate code coverage using istanbul
 
@@ -50,11 +50,19 @@ Code Coverage
 =============
 
 In addition to wrapping jasmine, this module wraps istanbul and allows you to easily generate code coverage for
-your project. 
+your project.
 
 ```bash
   $ ./node_modules/.bin/cover
 ```
 
+JUnit Reports
+=============
 
+Producing JUnit reports is simple. Simply make sure you pass the --reportType=junit argument.
+Example:
+
+```bash
+./node_modules/minijasminenodewrap/bin/mjnw --reportType=junit --savePath=$HOME/test_reports --filePrefix=junit-results.xml
+```
 
