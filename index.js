@@ -5,6 +5,7 @@ var multiGlob = require('multi-glob');
 var path = require('path');
 var argv = require('yargs').argv;
 var configFile = path.normalize(process.cwd() + '/jasmine-config.js');
+var jasmineReporters = require('jasmine2-reporters');
 
 var options;
 try {
@@ -31,6 +32,14 @@ if (specs)
 else
   execute();
 
-function execute () {
+function execute() {
+  if (argv.reportType === 'junit') {
+    var junitXmlReporter = new jasmineReporters.JUnitXmlReporter({
+      savePath: argv.savePath || '',
+      filePrefix: argv.filePrefix || ''
+    });
+    miniJasmineLib.addReporter(junitXmlReporter);
+  }
+
   miniJasmineLib.executeSpecs(options);
 }
