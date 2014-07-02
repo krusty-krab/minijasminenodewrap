@@ -17,6 +17,20 @@
     "wrapper"
   ],
   "author": "Joe Grund",
+  "maintainers": [
+    {
+      "name": "Will Johnson",
+      "email": "william.c1.johnson@gmail.com"
+    },
+    {
+      "name": "Joe Grund",
+      "email": "grundjoseph@gmail.com"
+    },
+    {
+      "name": "Wayne Seymour",
+      "email": "wayneseymour@gmail.com"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "istanbul": "0.2.12",
