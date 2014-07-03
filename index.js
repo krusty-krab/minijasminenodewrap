@@ -5,7 +5,7 @@ var multiGlob = require('multi-glob');
 var path = require('path');
 var argv = require('yargs').argv;
 var configFile = path.normalize(process.cwd() + '/jasmine-config.js');
-var jasmineReporters = require('jasmine2-reporters');
+var jasmineReporters = require('jasmine-reporters');
 
 var options;
 try {
