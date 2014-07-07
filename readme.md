@@ -8,7 +8,7 @@ A simple wrapper around [minijasminenode2](https://github.com/juliemr/minijasmin
 Install
 =======
 
-`npm install minijasminenodewrap --save`
+`npm install minijasminenodewrap --save-dev`
 
 Use
 ===
