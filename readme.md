@@ -19,7 +19,6 @@ The `jasmine-config.js` file should return an `object` of `options` matching the
 
 ```javascript
 module.exports = {
-  {
     // An array of filename globs, relative to current dir.
     specs: ['spec/**/*.js'],
     // A function to call on completion.
