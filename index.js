@@ -1,3 +1,4 @@
+/* jshint node: true */
 'use strict';
 
 var miniJasmineLib = require('minijasminenode2');
@@ -5,7 +6,7 @@ var multiGlob = require('multi-glob');
 var path = require('path');
 var argv = require('yargs').argv;
 var configFile = path.normalize(process.cwd() + '/jasmine-config.js');
-var jasmineReporters = require('jasmine-reporters');
+var krustyJasmineReporter = require('krusty-jasmine-reporter');
 
 var options;
 try {
@@ -34,11 +35,11 @@ else
 
 function execute() {
   if (argv.reportType === 'junit') {
-    var junitXmlReporter = new jasmineReporters.JUnitXmlReporter({
-      savePath: argv.savePath || '',
-      filePrefix: argv.filePrefix || ''
-    });
-    miniJasmineLib.addReporter(junitXmlReporter);
+    options.JUnitReportSavePath = argv.JUnitReportSavePath || options.JUnitReportSavePath || './';
+    options.JUnitReportFilePrefix = argv.JUnitReportFilePrefix || options.JUnitReportFilePrefix || 'results';
+    options.JUnitReportSuiteName = argv.JUnitReportSuiteName || options.JUnitReportSuiteName || 'Tests';
+    options.JUnitReportPackageName = argv.JUnitReportPackageName || options.JUnitReportPackageName || 'Tests';
+    miniJasmineLib.addReporter(new krustyJasmineReporter.KrustyJasmineJUnitReporter(options));
   }
 
   miniJasmineLib.executeSpecs(options);
