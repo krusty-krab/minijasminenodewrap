@@ -1,6 +1,6 @@
 {
   "name": "minijasminenodewrap",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Wraps minijasminenode to allow globbing from options and the CLI",
   "main": "index.js",
   "bin": {
