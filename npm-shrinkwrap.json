@@ -1,6 +1,6 @@
 {
   "name": "minijasminenodewrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "istanbul": {
       "version": "0.2.12",
@@ -209,8 +209,8 @@
       }
     },
     "krusty-jasmine-reporter": {
-      "version": "0.0.1",
-      "from": "krusty-jasmine-reporter@0.0.1",
+      "version": "0.0.2",
+      "from": "../krusty-jasmine-reporter",
       "dependencies": {
         "pretty-data": {
           "version": "0.40.0",
