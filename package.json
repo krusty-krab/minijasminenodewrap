@@ -1,6 +1,6 @@
 {
   "name": "minijasminenodewrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wraps minijasminenode to allow globbing from options and the CLI",
   "main": "index.js",
   "bin": {
@@ -34,7 +34,7 @@
   "license": "MIT",
   "dependencies": {
     "istanbul": "0.2.12",
-    "krusty-jasmine-reporter": "0.0.1",
+    "krusty-jasmine-reporter": "0.0.2",
     "minijasminenode2": "1.0.0",
     "multi-glob": "0.4.0",
     "yargs": "1.2.5"
